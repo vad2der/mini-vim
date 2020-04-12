@@ -7,7 +7,7 @@ class Functions
       "%5<a>s %-10<b>s %-20<c>s %<d>s\n",
       { a: ' ', b: 'COMMAND', c: 'ALIASES', d: 'DESCRIPTION' }
     )
-    result + formatted_commands.join('/n')
+    result + formatted_commands.join('')
   end
 
   def self.formatted_commands

@@ -10,6 +10,10 @@ RSpec.describe Input do
       expect(input.body).to equal(word)
     end
 
+    it 'returns default selection for empty command' do
+      expect(input.body_with_selection).to eq('[t]hisisonelongword')
+    end
+
     it 'selects first character' do
       expect(input.to_first_char).to eq('[t]hisisonelongword')
       expect(input.to_first_char).to eq('[t]hisisonelongword')
@@ -67,6 +71,10 @@ RSpec.describe Input do
     it 'initializes the Input class and .body' do
       expect(input).to be_an_instance_of(described_class)
       expect(input.body).to equal(word)
+    end
+
+    it 'returns default selection for empty command' do
+      expect(input.body_with_selection).to eq('[t]his is a sencence')
     end
 
     it 'selects first character' do

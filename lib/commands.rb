@@ -19,7 +19,8 @@ class Commands
       aliases: nil
     },
     'exit': { desc: 'Exit', aliases: %w[q quit] },
-    'n': { desc: 'New input', aliases: ['new'] }
+    'n': { desc: 'New input', aliases: ['new'] },
+    '': { desc: 'Returns the input with current selection', aliases: nil }
   }.freeze
 
   FORBIDDEN_CARS = ['[', ']'].freeze
@@ -55,6 +56,8 @@ class Commands
       input.select_until_char(command.strip[2..-1])
     else
       case command&.strip
+      when ''
+        input.body_with_selection
       when '?', 'help', 'h'
         Functions.return_help
       when 'q', 'exit', 'quit'

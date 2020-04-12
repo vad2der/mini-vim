@@ -76,8 +76,6 @@ class Input
     body_with_selection
   end
 
-  private
-
   def body_with_selection
     slice_start = (@start_select.zero? ? -1 : 0)
     slice_end = (@start_select.zero? ? 0 : @start_select - 1)
@@ -85,6 +83,8 @@ class Input
       '[' + @body[@start_select..@end_select] + ']' +
       @body[(@end_select + 1)..-1]
   end
+
+  private
 
   def assign_selection(ind)
     @start_select = ind
