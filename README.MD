@@ -44,6 +44,8 @@ Tasks:
 For implementation Ruby programming language has been chosen.
 
 Assumption about 30 chars input is not taken intp account.
+
+### Disclaimer
 As a person who is not a Vim user I had to assumpt some of specifics:
 - First char of the input is selected by default
 - Input is trimmed from starting and ending whitespaces by default
@@ -60,3 +62,5 @@ Inside the solution folder open a terminal and run `ruby main.rb`
 ### Testing
 Inside the solution folder open a terminal and run `rspec`
 `spec/functions_spec.rb` file has one commented test case as it tests `exit` command which brakes the testing. In case one wants to run test on it, uncomment it and run `rspec spec/spec/functions_spec.rb`. Other test files can be run separately in the same manner.
+### Addition
+- added empty command returning existing selection sate input
